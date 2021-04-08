@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Teams by League</title>
+<link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+	<h2>Teams by League List</h2>
+	<table>
+	  <thead>
+		<tr>
+			<th class="col15">League</th>
+			<th class="col60">League Name</th>
+			<th class="col25">Hall of Fame Location</th>
+		</tr>
+	  </thead>
+	  <tbody th:each="league: ${leagues}">
+		<tr>
+			 <td class="col15" th:text=${league.sport}></td>
+			 <td class="col60" th:text=${league.leagueName}></td>
+			 <td class="col25" th:text=${league.hallOfFame}></td>
+		</tr>
+		<tr th:each="team: ${league.listOfTeams}">
+			<td class="col15"></td>
+			<td class="col30" th:text=${team.city}></td>
+			<td class="col30" th:text=${team.name}></td>
+		</tr>
+	  </tbody>
+	</table>
+	<br/>
+   <a href="index.html">Main Menu</a>
+</body>
+</html>

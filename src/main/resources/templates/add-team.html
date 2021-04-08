@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add League</title>
+<link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+	<h2>Add Team</h2>
+	<form action="/addTeam" method="post">
+		<label>City</label><br/>
+		<input class="col25" type="text" name="city"><br/>
+		<label>Team Name</label><br/>
+		<input class="col30" type="text" name="name"><br/>
+		<label>League</label><br/>
+		<input class="col15" type="text" name="league"><br/>
+		<input type="submit" value="Add Team">
+	</form>
+	<br/>
+	<a href="index.html">Main Menu</a>
+</body>
+</html>

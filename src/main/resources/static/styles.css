@@ -1,0 +1,9 @@
+	table, th, td {width:250; border-style:solid; border:1}
+	table {border-collapse: collapse}
+	.col15 {width:15%; text-align:left}
+	.col60 {width:60%; text-align:left}
+	.col25 {width:25%; text-align:left}
+	.col30 {width:30%; text-align:left}
+	label {color:blue; font-size:small}
+	h2 {color:blue}
+	input[type=submit] {background-color:blue; color:white; padding:5px 10px; margin:4px 2px}

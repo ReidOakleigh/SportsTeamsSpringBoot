@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sports Teams</title>
+<link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+	<h2>League Edit/Delete</h2>
+  <form method="post" action="/editTeam">
+	<table>
+		<tr>
+			<th class="col15">Select</th>
+			<th class="col25">City Name</th>
+			<th class="col30">Team Name</th>
+			<th class="col15">League</th>
+		</tr>
+		<tr th:each="team: ${teams}">
+			<td class="col15"><input type="radio" name="id" th:value="${team.id}"></td>
+			<td class="col25" th:text="${team.city}"></td>
+			<td class="col30" th:text="${team.name}"></td>
+			<td class="col15" th:text="${team.league.sport}"></td>
+		</tr>
+	</table>
+	<input type="submit" value="edit"   name="editTeam">
+	<input type="submit" value="delete" name="deleteTeam">
+  </form>
+  <br/>
+  <a href="index.html">Main Menu</a>
+</body>
+</html>
